@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent">
+
+  <com.artfulbits.aiCharts.ChartView
+    android:id="@+id/chart_raw"
+    chart="@xml/chart_raw_ai"
+    android:background="@android:drawable/alert_dark_frame"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="0.5" />
+
+  <com.artfulbits.aiCharts.ChartView
+    android:id="@+id/chart_fft"
+    chart="@xml/chart_fft_ai"
+    android:background="@android:drawable/alert_dark_frame"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="0.5" />
+
+</LinearLayout>

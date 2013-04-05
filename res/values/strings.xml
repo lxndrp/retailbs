@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="m_ctx_chart_raw_coordinatesystem">Coordinate System</string>
+    <string name="m_ctx_chart_raw_phone">Phone</string>
+    <string name="m_ctx_chart_raw_world">World</string>
+  <string
+    name="app_name">anDometry</string>
+
+  <string name="a_surface_label">3D Surface</string>
+  <string name="a_chart_label">Data Charts</string>
+  <string name="a_preferences_label">Preferences</string>
+
+  
+  
+  
+    
+  <!-- Options Menu -->
+  <string name="m_opt_preferences">Preferences</string>
+  <string name="m_opt_quit">Quit</string>
+
+  <string
+    name="p_sensorCategory">Data Acquisition Settings</string>
+  <string name="p_sensorDelay_title">Sensor Delay</string>
+  <string name="p_sensorDelay_summary">
+    Sets the frequency of the overall sensor data acquisition.
+  </string>
+  <string-array name="p_sensorDelay_entries">
+    <item>Fastest</item>
+    <item>Game</item>
+    <item>Normal</item>
+    <item>UI</item>
+  </string-array>
+  <string-array name="p_sensorDelay_entryValues">
+    <item>0</item>
+    <item>1</item>
+    <item>3</item>
+    <item>2</item>
+  </string-array>
+  <string name="p_sensorDelay_dialogTitle">Select resolution:</string>
+
+  <string
+    name="p_fftCategory">Data Analysis Settings</string>
+  <string
+    name="p_fftAnalysisFrequency_title">Analysis Frequency</string>
+  <string
+    name="p_fftAnalysisFrequency_summary">
+    Determines how often the analysis of acquired sensor data is performed.
+  </string>
+  
+  
+  <string
+    name="p_fftAnalysisFrequency_dialogTitle">Select frequency:</string>
+
+  <string
+    name="p_fftBufferSize_title">Use Larger Buffer</string>
+  <string
+    name="p_fftBufferSize_summary">
+    Increases the analysis buffer size from 32 to 64, yielding smoother values.
+  </string>
+
+  <string
+    name="p_fftDampingValue_title">Damping Rate</string>
+  <string
+    name="p_fftDampingValue_summary">
+    Sets the threshold for damping unintended movements.
+  </string>
+    <string
+    name="p_fftDampingValue_dialogTitle">Select frequency:</string>
+  
+
+<string name="s_odometry_label">Odometry Service</string>
+<string name="chart_raw_title">Raw Value Series</string>
+<string name="chart_fft_title">FFT Value Series</string>
+</resources>

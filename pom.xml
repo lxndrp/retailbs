@@ -1,0 +1,55 @@
+<project
+        xmlns="http://maven.apache.org/POM/4.0.0"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- basic data -->
+    <groupId>de.irf.it.retailbs</groupId>
+    <artifactId>andometry</artifactId>
+    <version>0.1-SNAPSHOT</version>
+    <packaging>apk</packaging>
+    <dependencies>
+        <dependency>
+            <groupId>com.google.android</groupId>
+            <artifactId>android</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-math</artifactId>
+            <version>2.1</version>
+            <type>jar</type>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.artfulbits</groupId>
+            <artifactId>aicharts</artifactId>
+            <version>1.5.0.3</version>
+            <type>jar</type>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
+    <parent>
+        <groupId>de.irf.it.retailbs</groupId>
+        <artifactId>meta</artifactId>
+        <version>0.1-SNAPSHOT</version>
+    </parent>
+
+    <!-- build settings -->
+    <build>
+        <finalName>${project.artifactId}</finalName>
+        <plugins>
+            <plugin>
+                <groupId>com.jayway.maven.plugins.android.generation2</groupId>
+                <artifactId>maven-android-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+    <!-- project information -->
+    <name>retaiLBS anDometry Localization Showcase</name>
+
+</project>

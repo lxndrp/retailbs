@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Id$ -->
+
+<project
+        xmlns="http://maven.apache.org/POM/4.0.0"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- basic data -->
+    <groupId>de.irf.it.retailbs</groupId>
+    <artifactId>meta</artifactId>
+    <version>0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.google.android</groupId>
+                <artifactId>android</artifactId>
+                <version>${android.version}</version>
+                <scope>provided</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+    <properties>
+        <android.version>2.2.1</android.version>
+        <android.platform>8</android.platform>
+        <project.build.javac.level>1.6</project.build.javac.level>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <!-- build settings -->
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-resources-plugin</artifactId>
+                    <configuration>
+                        <encoding>${project.build.sourceEncoding}</encoding>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <configuration>
+                        <source>${project.build.javac.level}</source>
+                        <target>${project.build.javac.level}</target>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>com.jayway.maven.plugins.android.generation2</groupId>
+                    <artifactId>maven-android-plugin</artifactId>
+                    <version>2.8.3</version>
+                    <configuration>
+                        <sdk>
+                            <path>${android.sdk.path}</path>
+                            <platform>${android.platform}</platform>
+                        </sdk>
+                        <device>${android.device.id}</device>
+                        <deleteConflictingFiles>true</deleteConflictingFiles>
+                        <undeployBeforeDeploy>true</undeployBeforeDeploy>
+                    </configuration>
+                    <extensions>true</extensions>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
+    <!-- project information -->
+    <name>retaiLBS Android Applications</name>
+    <description>The ${project.name} bundles all Android Platform-related fragments within the retaiLBS project.
+    </description>
+    <url>http://forge.it.irf.tu-dortmund.de/projects/retaiLBS</url>
+    <inceptionYear>2010</inceptionYear>
+
+    <!--
+      <licenses> <license> <name>GPL 3</name>
+      <url>http://www.gnu.org/licenses/gpl.txt</url>
+      <distribution>repo</distribution> <comments>A business-friendly OSS
+      license</comments> </license> </licenses>
+    -->
+    <organization>
+        <name>TU Dortmund University</name>
+        <url>http://www.tu-dortmund.de</url>
+    </organization>
+    <developers>
+        <developer>
+            <id>alexp</id>
+            <name>Alexander Papaspyrou</name>
+            <email>alexander.papaspyrou@tu-dortmund.de</email>
+            <organization>${project.organization.name}</organization>
+            <organizationUrl>${project.organization.url}</organizationUrl>
+            <roles>
+                <role>Founder</role>
+                <role>Project Manager</role>
+                <role>Architect</role>
+            </roles>
+            <timezone>+1</timezone>
+        </developer>
+        <developer>
+            <id>czarnetzki</id>
+            <name>Stefan Czarnetzki</name>
+            <email>stefan.czarnetzki@tu-dortmund.de</email>
+            <organization>${project.organization.name}</organization>
+            <organizationUrl>${project.organization.url}</organizationUrl>
+            <roles>
+                <role>Founder</role>
+                <role>Project Manager</role>
+                <role>Architect</role>
+            </roles>
+            <timezone>+1</timezone>
+        </developer>
+    </developers>
+
+    <!-- environment settings -->
+    <issueManagement>
+        <system>trac</system>
+        <url>http://forge.it.irf.uni-dortmund.de/trac/retaiLBS/report/1</url>
+    </issueManagement>
+    <ciManagement>
+        <system>hudson</system>
+        <url>http://forge.it.irf.tu-dortmund.de/hudson/job/${project.artifactId}/</url>
+    </ciManagement>
+    <scm>
+        <connection>scm:svn:http://forge.it.irf.tu-dortmund.de/repos/projects/retaiLBS/android/trunk/</connection>
+        <developerConnection>scm:svn:https://forge.it.irf.tu-dortmund.de/repos/projects/retaiLBS/android/trunk/
+        </developerConnection>
+        <url>http://forge.it.irf.tu-dortmund.de/repos/projects/retaiLBS/android/trunk/</url>
+    </scm>
+    <repositories>
+        <repository>
+            <id>nexus.irf-it.tudo</id>
+            <name>Nexus Repository Manager at TU Dortmund University</name>
+            <url>http://forge.it.irf.tu-dortmund.de/nexus/content/groups/retailbs</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+    <distributionManagement>
+        <downloadUrl>http://forge.it.irf.tu-dortmund.de/nexus/content/repositories/releases</downloadUrl>
+        <repository>
+            <id>nexus.irf-it.tudo</id>
+            <name>Nexus Repository Manager at TU Dortmund University (Releases)</name>
+            <url>http://forge.it.irf.tu-dortmund.de/nexus/content/repositories/releases</url>
+        </repository>
+        <snapshotRepository>
+            <id>nexus.irf-it.tudo</id>
+            <name>Nexus Repository Manager at TU Dortmund University (Snapshots)</name>
+            <url>http://forge.it.irf.tu-dortmund.de/nexus/content/repositories/snapshots</url>
+        </snapshotRepository>
+        <site>
+            <id>site.irf-it.tudo</id>
+            <name>retaiLBS Project Pages at TU Dortmund University</name>
+            <url>dav:http://forge.it.irf.tu-dortmund.de/projects/retaiLBS</url>
+        </site>
+    </distributionManagement>
+
+</project>

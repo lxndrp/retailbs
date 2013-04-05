@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <PreferenceCategory
+    android:title="@string/p_sensorCategory">
+
+    <ListPreference
+      android:key="andometry_sensorDelay"
+      android:defaultValue="2"
+      android:title="@string/p_sensorDelay_title"
+      android:summary="@string/p_sensorDelay_summary"
+      android:entries="@array/p_sensorDelay_entries"
+      android:entryValues="@array/p_sensorDelay_entryValues"
+      android:dialogTitle="@string/p_sensorDelay_dialogTitle" />
+
+  </PreferenceCategory>
+
+  <PreferenceCategory
+    android:title="@string/p_fftCategory">
+
+    <CheckBoxPreference
+      android:key="andometry_fftBufferSize"
+      android:defaultValue="false"
+      android:title="@string/p_fftBufferSize_title"
+      android:summary="@string/p_fftBufferSize_summary" />
+
+    <EditTextPreference
+      android:key="andometry_fftDampingValue"
+      android:defaultValue="0.1"
+      android:title="@string/p_fftDampingValue_title"
+      android:summary="@string/p_fftDampingValue_summary"
+      android:dialogTitle="@string/p_fftDampingValue_dialogTitle" />
+
+    <EditTextPreference
+      android:key="andometry_fftAnalysisFrequency"
+      android:defaultValue="10"
+      android:title="@string/p_fftAnalysisFrequency_title"
+      android:summary="@string/p_fftAnalysisFrequency_summary"
+      android:dialogTitle="@string/p_fftAnalysisFrequency_dialogTitle" />
+
+  </PreferenceCategory>
+</PreferenceScreen>

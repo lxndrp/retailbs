@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <item
+    name="p_sensorDelay_id"
+    type="id">p_sensordelay_id</item>
+  <integer
+    name="p_sensorDelay_defaultValue">2</integer>
+  
+  <item
+    name="p_fftBufferSize_id"
+    type="id">p_fftBufferSize_id</item>
+  <bool name="p_fftBufferSize_defaultValue">true</bool>
+  
+  <item
+    name="p_fftDampingValue_id"
+    type="id">p_fftDampingValue_id</item>
+
+  <item
+    name="p_fftAnalysisFrequency_id"
+    type="id">p_fftAnalysisFrequency_id</item>
+
+</resources>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ai:chart
+  xmlns:ai="http://www.artfulbits.com/android/aiCharts">
+  <ai:area>
+    <area.xaxis
+      grid_visible="true"
+      labels_visible="true"
+      title="t" />
+    <area.yaxis
+      grid_visible="true"
+      labels_visible="true"
+      title="data" />
+  </ai:area>
+  <ai:series
+    name="x_direction"
+    type="Line" />
+  <ai:series
+    name="y_direction"
+    type="Line" />
+  <ai:series
+    name="z_direction"
+    type="Line" />
+</ai:chart>
